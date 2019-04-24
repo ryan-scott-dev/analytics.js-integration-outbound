@@ -185,7 +185,7 @@ describe('Outbound', function() {
 
       it('should send a page event', function() {
         analytics.page('event');
-        analytics.called(window.outbound.track, '[Segment Page] event', {
+        analytics.called(window.outbound.track, '[Segment Page View]', {
           name: 'event',
           path: '/context.html',
           search: '',
@@ -196,7 +196,7 @@ describe('Outbound', function() {
 
       it('should send an event and properties', function() {
         analytics.page('event', { property: true });
-        analytics.called(window.outbound.track, '[Segment Page] event', {
+        analytics.called(window.outbound.track, '[Segment Page View]', {
           property: true,
           name: 'event',
           path: '/context.html',
